@@ -19,7 +19,7 @@ describe("generateReleaseNotes", () => {
 
     const result = await generateReleaseNotes({
       client: mockClient,
-      model: "claude-sonnet-4-20250514",
+      model: "claude-sonnet-4-6",
       commits: "abc1234 feat: add login",
       diffs: "diff --git a/src/login.ts ...",
       categories: ["Features", "Bug Fixes", "Other"],
@@ -29,7 +29,7 @@ describe("generateReleaseNotes", () => {
     expect(result).toBe("## Features\n- Added login page");
 
     const callArgs = mockClient.messages.create.mock.calls[0][0];
-    expect(callArgs.model).toBe("claude-sonnet-4-20250514");
+    expect(callArgs.model).toBe("claude-sonnet-4-6");
     expect(callArgs.system).toContain("Features");
     expect(callArgs.system).toContain("Bug Fixes");
     expect(callArgs.messages[0].content).toContain("abc1234 feat: add login");
@@ -45,7 +45,7 @@ describe("generateReleaseNotes", () => {
 
     await generateReleaseNotes({
       client: mockClient,
-      model: "claude-sonnet-4-20250514",
+      model: "claude-sonnet-4-6",
       commits: "abc feat: stuff",
       diffs: "diff ...",
       categories: ["Features", "Other"],
@@ -63,7 +63,7 @@ describe("generateReleaseNotes", () => {
 
     await generateReleaseNotes({
       client: mockClient,
-      model: "claude-sonnet-4-20250514",
+      model: "claude-sonnet-4-6",
       commits: "abc feat: thing",
       diffs: "diff ...",
       categories: ["Added", "Changed", "Removed"],
@@ -84,7 +84,7 @@ describe("generateReleaseNotes", () => {
     await expect(
       generateReleaseNotes({
         client: mockClient,
-        model: "claude-sonnet-4-20250514",
+        model: "claude-sonnet-4-6",
         commits: "abc feat: thing",
         diffs: "diff ...",
         categories: ["Features"],

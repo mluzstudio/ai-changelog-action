@@ -12,7 +12,7 @@ inputs:
   model:
     description: "Claude model to use"
     required: false
-    default: "claude-sonnet-4-20250514"
+    default: "claude-sonnet-4-6"
   extra-prompt:
     description: "Custom instructions for tone/format of release notes"
     required: false

@@ -33,7 +33,7 @@ jobs:
 |-------|----------|---------|-------------|
 | `anthropic-api-key` | Yes | — | Anthropic API key |
 | `github-token` | Yes | — | GitHub token with `contents: write` |
-| `model` | No | `claude-sonnet-4-20250514` | Claude model |
+| `model` | No | `claude-sonnet-4-6` | Claude model |
 | `extra-prompt` | No | `""` | Custom instructions for tone/format |
 | `categories` | No | `Features,Bug Fixes,Improvements,Breaking Changes,Other` | Changelog categories |
 | `changelog-file` | No | `CHANGELOG.md` | Path to changelog file |
