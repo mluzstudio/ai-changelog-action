@@ -37,5 +37,5 @@ runs:
   main: "dist/index.js"
 
 branding:
-  icon: "file-text"
-  color: "blue"
+  icon: "zap"
+  color: "orange"
