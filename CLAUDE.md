@@ -25,6 +25,6 @@ Each module takes dependencies as parameters (no global singletons) for testabil
 - Changelog tests use real filesystem with tmp dirs (no mocks)
 
 ## Key Conventions
-- `dist/` is gitignored — users reference the action from the repo, so they build from source or use a release tag
+- `dist/` is committed (required for GitHub Actions `uses: ./` and marketplace) — rebuild with `npm run build` after src changes
 - Action inputs defined in `action.yml` — keep in sync with `core.getInput()` calls in `src/index.ts`
 - Diffs are truncated to ~100KB to stay within Claude's context limits
