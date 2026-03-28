@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm test)",
+      "Bash(npm run build)",
+      "Bash(npx tsc:*)",
+      "Bash(npx vitest:*)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if echo $TOOL_INPUT | grep -q '\"file_path\".*src/'; then npm test 2>&1 | tail -5; fi",
+            "description": "Run tests after editing src/ files"
+          }
+        ]
+      }
+    ]
+  }
+}

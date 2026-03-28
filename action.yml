@@ -1,0 +1,41 @@
+name: "AI Changelog Generator"
+description: "Generate human-readable release notes from git tags using Claude AI"
+author: "MLStudio"
+
+inputs:
+  anthropic-api-key:
+    description: "Anthropic API key for Claude"
+    required: true
+  github-token:
+    description: "GitHub token for creating releases"
+    required: true
+  model:
+    description: "Claude model to use"
+    required: false
+    default: "claude-sonnet-4-20250514"
+  extra-prompt:
+    description: "Custom instructions for tone/format of release notes"
+    required: false
+    default: ""
+  categories:
+    description: "Comma-separated list of changelog categories"
+    required: false
+    default: "Features,Bug Fixes,Improvements,Breaking Changes,Other"
+  changelog-file:
+    description: "Path to the changelog file"
+    required: false
+    default: "CHANGELOG.md"
+
+outputs:
+  release-notes:
+    description: "The generated markdown release notes"
+  tag:
+    description: "The current tag that was processed"
+
+runs:
+  using: "node20"
+  main: "dist/index.js"
+
+branding:
+  icon: "file-text"
+  color: "blue"
