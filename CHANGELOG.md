@@ -1,5 +1,21 @@
 # Changelog
 
+
+## [v1.0.1] - 2026-03-28
+
+## Features
+
+- **MIT License added**: The project is now officially licensed under the MIT License, clarifying usage and distribution rights for contributors and users.
+
+## Improvements
+
+- **Updated action branding**: The GitHub Marketplace icon has been changed to a "zap" with an orange color for a more distinctive appearance.
+- **Corrected repository references in README**: Usage examples now point to the correct `mluzstudio/ai-changelog-action` repository instead of the placeholder `your-org/ai-changelog-action`.
+
+## Other
+
+- Added `CHANGELOG.md` to track version history going forward.
+
 ## [v1.0.0] - 2026-03-28
 
 ## Features
