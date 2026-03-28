@@ -21,7 +21,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: your-org/ai-changelog-action@v1
+      - uses: mluzstudio/ai-changelog-action@v1
         with:
           anthropic-api-key: ${{ secrets.ANTHROPIC_API_KEY }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -50,7 +50,7 @@ jobs:
 ### Custom Categories
 
 ```yaml
-- uses: your-org/ai-changelog-action@v1
+- uses: mluzstudio/ai-changelog-action@v1
   with:
     anthropic-api-key: ${{ secrets.ANTHROPIC_API_KEY }}
     github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -60,7 +60,7 @@ jobs:
 ### Custom Tone
 
 ```yaml
-- uses: your-org/ai-changelog-action@v1
+- uses: mluzstudio/ai-changelog-action@v1
   with:
     anthropic-api-key: ${{ secrets.ANTHROPIC_API_KEY }}
     github-token: ${{ secrets.GITHUB_TOKEN }}
