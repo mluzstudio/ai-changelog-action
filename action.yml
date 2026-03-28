@@ -1,4 +1,4 @@
-name: "AI Changelog Generator"
+name: "AI Changelog Action"
 description: "Generate human-readable release notes from git tags using Claude AI"
 author: "MLStudio"
 
